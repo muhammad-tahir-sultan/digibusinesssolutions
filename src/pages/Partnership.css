@@ -1,0 +1,261 @@
+.model-feature-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  padding: 3.5rem;
+  align-items: center;
+}
+
+.model-visual-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.donut-graphic-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.donut-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#1D4ED8 0% 60%, #10B981 60% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(29, 78, 216, 0.2);
+}
+
+.donut-center {
+  width: 140px;
+  height: 140px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-title {
+  font-size: 0.85rem;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.donut-stat {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.split-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.legend-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.ops-legend {
+  background: rgba(29, 78, 216, 0.06);
+  border: 1px solid rgba(29, 78, 216, 0.15);
+}
+
+.client-legend {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.legend-badge {
+  background: #1D4ED8;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.client-badge {
+  background: #10B981;
+}
+
+.legend-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.legend-item p {
+  font-size: 0.825rem;
+  color: #64748B;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Model Text Box */
+.model-text-box h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.lead-paragraph {
+  font-size: 1.05rem;
+  color: #4B5563;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.model-bullet-points {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bullet-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.bullet-icon {
+  color: #10B981;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.bullet-card strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+}
+
+.bullet-card p {
+  font-size: 0.875rem;
+  color: #64748B;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Qualification Grid */
+.qualification-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.qual-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.qual-header {
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.for-header {
+  background: #0B1F3A;
+  color: #ffffff;
+}
+
+.for-header h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.not-header {
+  background: #1F2937;
+  color: #ffffff;
+}
+
+.not-header h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.qual-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.for-icon {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34D399;
+}
+
+.not-icon {
+  background: rgba(239, 68, 68, 0.2);
+  color: #F87171;
+}
+
+.qual-list {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.qual-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.qual-check {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.qual-check.green {
+  color: #10B981;
+}
+
+.qual-check.red {
+  color: #EF4444;
+}
+
+@media (max-width: 900px) {
+  .model-feature-card {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.75rem;
+  }
+  .qualification-grid {
+    grid-template-columns: 1fr;
+  }
+}
