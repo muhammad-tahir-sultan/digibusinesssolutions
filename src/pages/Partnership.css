@@ -259,3 +259,85 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 640px) {
+  .model-feature-card {
+    padding: 1.5rem 1.15rem;
+    border-radius: 12px;
+    gap: 1.75rem;
+  }
+
+  .donut-graphic-wrapper {
+    width: 170px;
+    height: 170px;
+  }
+
+  .donut-center {
+    width: 110px;
+    height: 110px;
+  }
+
+  .donut-stat {
+    font-size: 1.35rem;
+  }
+
+  .split-legend {
+    gap: 0.75rem;
+  }
+
+  .legend-item {
+    padding: 0.75rem 0.85rem;
+    gap: 10px;
+  }
+
+  .legend-badge {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+
+  .legend-item strong {
+    font-size: 0.9rem;
+  }
+
+  .legend-item p {
+    font-size: 0.8rem;
+  }
+
+  .model-feature-text h2 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
+  .model-feature-text p {
+    font-size: 0.885rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+
+  .feature-points {
+    gap: 0.75rem;
+  }
+
+  .qual-card {
+    border-radius: 12px;
+  }
+
+  .qual-header {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .qual-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .qual-list {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .qual-list li {
+    font-size: 0.885rem;
+    gap: 10px;
+  }
+}

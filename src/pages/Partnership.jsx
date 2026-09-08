@@ -7,7 +7,8 @@ import {
   TrendingUp, 
   DollarSign, 
   FileText, 
-  Briefcase 
+  Briefcase,
+  MessageCircle 
 } from 'lucide-react';
 import Button from '../components/Button';
 import './Partnership.css';
@@ -205,7 +206,8 @@ const Partnership = () => {
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp btn-lg"
               >
-                Chat on WhatsApp (+92 326 6640988)
+                <MessageCircle size={18} />
+                <span>Chat on WhatsApp</span>
               </a>
             </div>
           </div>

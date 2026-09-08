@@ -283,3 +283,42 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 640px) {
+  .apply-form-card {
+    padding: 1.5rem 1.15rem;
+    border-radius: 12px;
+  }
+
+  .form-card-header h2 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .form-card-header p {
+    font-size: 0.885rem;
+    line-height: 1.5;
+  }
+
+  .accordion-trigger {
+    padding: 1rem 1.15rem;
+  }
+
+  .accordion-q-text {
+    font-size: 0.95rem;
+  }
+
+  .accordion-content {
+    padding: 0 1.15rem 1.15rem;
+  }
+
+  .accordion-content p {
+    font-size: 0.885rem;
+    line-height: 1.55;
+  }
+
+  .sidebar-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+}

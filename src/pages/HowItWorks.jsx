@@ -10,7 +10,8 @@ import {
   ShieldCheck, 
   AlertCircle,
   Sparkles,
-  ArrowDown
+  ArrowDown,
+  MessageCircle
 } from 'lucide-react';
 import Button from '../components/Button';
 import './HowItWorks.css';
@@ -338,7 +339,8 @@ const HowItWorks = () => {
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp btn-lg"
               >
-                Apply via WhatsApp
+                <MessageCircle size={18} />
+                <span>Apply via WhatsApp</span>
               </a>
             </div>
           </div>

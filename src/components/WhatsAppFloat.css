@@ -77,14 +77,14 @@
 
 @media (max-width: 640px) {
   .whatsapp-float-btn {
-    bottom: 18px;
-    right: 18px;
+    bottom: 16px;
+    right: 16px;
   }
   .whatsapp-badge {
     display: none; /* Keep clean on small mobile screens */
   }
   .whatsapp-icon-wrapper {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
   }
 }

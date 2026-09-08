@@ -28,7 +28,7 @@ const Home = () => {
               <span>US & EU eBay Account Holders</span>
             </div>
             <h1 className="hero-title">
-              We Run Your eBay Store. <br />
+              We Run Your eBay Store. <br className="hero-desktop-br" />
               <span className="highlight-text">You Keep 40% of the Profits.</span>
             </h1>
             <p className="hero-subtitle">
@@ -70,16 +70,16 @@ const Home = () => {
               </div>
 
               <div className="founder-card-footer">
-                <div className="founder-info">
-                  <div className="founder-name-row">
+                <div className="founder-top-row">
+                  <div className="founder-identity">
                     <strong className="founder-name">Muhammad Tahir</strong>
                     <span className="founder-verified-badge">✓ Verified</span>
                   </div>
-                  <span className="founder-title">Founder, Digi Business Solutions</span>
+                  <div className="founder-split-tag">
+                    <span>60/40 Split</span>
+                  </div>
                 </div>
-                <div className="founder-split-tag">
-                  <span>60/40 Split</span>
-                </div>
+                <span className="founder-title">Founder, Digi Business Solutions</span>
               </div>
             </div>
           </div>
@@ -358,7 +358,8 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp btn-lg"
               >
-                Chat on WhatsApp (+92 326 6640988)
+                <MessageCircle size={18} />
+                <span>Chat on WhatsApp</span>
               </a>
             </div>
           </div>
