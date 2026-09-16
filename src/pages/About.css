@@ -44,6 +44,60 @@
   gap: 1.5rem;
 }
 
+.story-leadership-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.story-duo-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #081629;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.story-duo-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.story-duo-item:hover .story-duo-img {
+  transform: scale(1.04);
+}
+
+.story-duo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 10px 8px;
+  background: linear-gradient(to top, rgba(11, 31, 58, 0.95) 0%, rgba(11, 31, 58, 0.6) 70%, transparent 100%);
+  color: #ffffff;
+}
+
+.story-duo-caption strong {
+  display: block;
+  font-size: 0.82rem;
+  font-family: var(--font-heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-duo-caption span {
+  font-size: 0.7rem;
+  color: #10B981;
+  font-weight: 500;
+  display: block;
+}
+
 .story-founder-image-box {
   border-radius: 12px;
   overflow: hidden;
@@ -165,6 +219,143 @@
   line-height: 1.55;
 }
 
+/* Executive Leadership Team Section */
+.leadership-section {
+  position: relative;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.leadership-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.leadership-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.09);
+  border-color: rgba(29, 78, 216, 0.35);
+}
+
+.leadership-img-wrapper {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  background: #081629;
+}
+
+.leadership-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.leadership-card:hover .leadership-img {
+  transform: scale(1.04);
+}
+
+.leadership-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(11, 31, 58, 0.88);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.leadership-info {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.leadership-header {
+  margin-bottom: 0.75rem;
+}
+
+.leadership-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.leadership-name-row h3 {
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.verified-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  white-space: nowrap;
+}
+
+.leadership-role {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  margin-bottom: 0.75rem;
+}
+
+.leadership-bio {
+  font-size: 0.9rem;
+  color: #64748B;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.leadership-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.leadership-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--color-bg-alt);
+  color: #4B5563;
+  border: 1px solid var(--color-border);
+}
+
 @media (max-width: 992px) {
   .story-wrapper {
     grid-template-columns: 1fr;
@@ -175,6 +366,16 @@
   }
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+  .leadership-img-wrapper {
+    height: 290px;
   }
 }
 
@@ -194,6 +395,18 @@
   .story-callout-box {
     padding: 1.25rem;
     border-radius: 12px;
+  }
+
+  .story-duo-img {
+    height: 180px;
+  }
+
+  .story-duo-caption strong {
+    font-size: 0.78rem;
+  }
+
+  .story-duo-caption span {
+    font-size: 0.65rem;
   }
 
   .callout-num {
@@ -221,4 +434,13 @@
   .dept-card {
     padding: 1.25rem;
   }
+
+  .leadership-info {
+    padding: 1.25rem;
+  }
+
+  .leadership-name-row h3 {
+    font-size: 1.2rem;
+  }
 }
+

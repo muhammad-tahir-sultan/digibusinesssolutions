@@ -9,7 +9,8 @@ import {
   Headphones, 
   CheckCircle2, 
   TrendingUp,
-  MessageCircle 
+  MessageCircle,
+  Users
 } from 'lucide-react';
 import Button from '../components/Button';
 import './About.css';
@@ -49,12 +50,29 @@ const About = () => {
             </div>
 
             <div className="story-callout-box">
-              <div className="story-founder-image-box">
-                <img 
-                  src="/Founder_Photo_Navy_Theme.png" 
-                  alt="Founder & Operations Leadership - Digi Business Solutions" 
-                  className="story-founder-img"
-                />
+              <div className="story-leadership-duo">
+                <div className="story-duo-item">
+                  <img 
+                    src="/Founder_Photo_Navy_Theme.png" 
+                    alt="Muhammad Tahir - Founder & Operations Lead" 
+                    className="story-duo-img"
+                  />
+                  <div className="story-duo-caption">
+                    <strong>Muhammad Tahir</strong>
+                    <span>Founder</span>
+                  </div>
+                </div>
+                <div className="story-duo-item">
+                  <img 
+                    src="/Usama_Hanan_Business_Partner.png" 
+                    alt="Usama Hanan - Business Partner" 
+                    className="story-duo-img"
+                  />
+                  <div className="story-duo-caption">
+                    <strong>Usama Hanan</strong>
+                    <span>Business Partner</span>
+                  </div>
+                </div>
               </div>
               <div className="callout-inner">
                 <div className="callout-stat-group">
@@ -77,8 +95,91 @@ const About = () => {
         </div>
       </section>
 
-      {/* SECTION 3: OUR CORE VALUES */}
-      <section className="section bg-alt">
+      {/* SECTION 3: LEADERSHIP TEAM */}
+      <section className="section bg-alt leadership-section">
+        <div className="container">
+          <div className="section-header text-center">
+            <span className="story-pill">CORE LEADERSHIP</span>
+            <h2 className="section-title">Meet Our Executive Team</h2>
+            <p className="section-subtitle">
+              Experienced e-commerce leaders managing daily store operations, client relations, and strategic growth.
+            </p>
+          </div>
+
+          <div className="leadership-grid">
+            {/* Muhammad Tahir */}
+            <div className="leadership-card">
+              <div className="leadership-img-wrapper">
+                <img 
+                  src="/Founder_Photo_Navy_Theme.png" 
+                  alt="Muhammad Tahir - Founder & Operations Lead" 
+                  className="leadership-img"
+                />
+                <div className="leadership-badge">
+                  <ShieldCheck size={14} />
+                  <span>Founder</span>
+                </div>
+              </div>
+              <div className="leadership-info">
+                <div className="leadership-header">
+                  <div className="leadership-name-row">
+                    <h3>Muhammad Tahir</h3>
+                    <span className="verified-tag">
+                      <CheckCircle2 size={13} /> Verified
+                    </span>
+                  </div>
+                  <div className="leadership-role">Founder & Operations Lead</div>
+                </div>
+                <p className="leadership-bio">
+                  Leads day-to-day store operations, supplier integrations, platform compliance, and high-margin product curation to ensure consistent store performance.
+                </p>
+                <div className="leadership-tags">
+                  <span className="leadership-tag">Operations Management</span>
+                  <span className="leadership-tag">Account Health & Risk</span>
+                  <span className="leadership-tag">Catalog Optimization</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Usama Hanan */}
+            <div className="leadership-card">
+              <div className="leadership-img-wrapper">
+                <img 
+                  src="/Usama_Hanan_Business_Partner.png" 
+                  alt="Usama Hanan - Business Partner" 
+                  className="leadership-img"
+                />
+                <div className="leadership-badge">
+                  <Handshake size={14} />
+                  <span>Business Partner</span>
+                </div>
+              </div>
+              <div className="leadership-info">
+                <div className="leadership-header">
+                  <div className="leadership-name-row">
+                    <h3>Usama Hanan</h3>
+                    <span className="verified-tag">
+                      <CheckCircle2 size={13} /> Verified
+                    </span>
+                  </div>
+                  <div className="leadership-role">Business Partner</div>
+                </div>
+                <p className="leadership-bio">
+                  Oversees strategic client partnerships, business scaling, partner relations, and commercial development to accelerate shared revenue opportunities.
+                </p>
+                <div className="leadership-tags">
+                  <span className="leadership-tag">Business Partnerships</span>
+                  <span className="leadership-tag">Strategic Scaling</span>
+                  <span className="leadership-tag">Client Relations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: OUR CORE VALUES */}
+      <section className="section">
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">Our Guiding Values</h2>
@@ -123,8 +224,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* SECTION 4: TEAM SNAPSHOT */}
-      <section className="section">
+      {/* SECTION 5: TEAM SNAPSHOT */}
+      <section className="section bg-alt">
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">The Operational Departments Running Your Store</h2>
@@ -169,8 +270,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* SECTION 5: CTA */}
-      <section className="cta-banner-section bg-alt">
+      {/* SECTION 6: CTA */}
+      <section className="cta-banner-section">
         <div className="container text-center">
           <div className="cta-banner-card">
             <h2>Want to Partner with Digi Business Solutions?</h2>
@@ -199,3 +300,4 @@ const About = () => {
 };
 
 export default About;
+
