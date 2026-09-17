@@ -1126,11 +1126,18 @@
     width: 100%;
   }
 
+  .inline-link-btn {
+    font-size: 0.85rem;
+    padding: 0.55rem 1rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
   .cta-banner-buttons .btn {
     width: 100%;
-    max-width: 320px;
-    padding: 0.72rem 1.25rem;
-    font-size: 0.925rem;
+    max-width: 280px;
+    padding: 0.62rem 1.1rem;
+    font-size: 0.88rem;
     justify-content: center;
     border-radius: 8px;
   }
@@ -1197,6 +1204,18 @@
 
   .stage-profit-amount {
     font-size: 1.25rem;
+  }
+
+  .inline-link-btn {
+    font-size: 0.78rem;
+    padding: 0.48rem 0.85rem;
+    gap: 0.35rem;
+  }
+
+  .cta-banner-buttons .btn {
+    max-width: 250px;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.82rem;
   }
 }
 
