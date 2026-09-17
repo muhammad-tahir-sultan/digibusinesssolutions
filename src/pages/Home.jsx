@@ -11,9 +11,14 @@ import {
   Globe,
   ChevronRight,
   Sparkles,
-  MessageCircle
+  MessageCircle,
+  Clock,
+  Award,
+  AlertCircle,
+  BarChart3
 } from 'lucide-react';
 import Button from '../components/Button';
+import StoreProofGallery from '../components/StoreProofGallery';
 import './Home.css';
 
 const Home = () => {
@@ -133,8 +138,167 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION 3: WHY THIS WORKS (3-COLUMN BENEFIT CARDS) */}
-      <section className="section bg-alt">
+      {/* SECTION 3: TRACK RECORD & PROFIT TRAJECTORY */}
+      <section className="section track-record-section">
+        <div className="container">
+          <div className="section-header text-center">
+            <span className="section-pill">OUR JOURNEY & EXPERTISE</span>
+            <h2 className="section-title">3+ Years of Experience Across 73+ Partner Stores</h2>
+            <p className="section-subtitle">
+              We operate on real e-commerce mechanics, not empty promises. Here is what we've built and the realistic profit trajectory you can expect.
+            </p>
+          </div>
+
+          {/* Key Milestone Stats Row */}
+          <div className="track-stats-row">
+            <div className="track-stat-card">
+              <div className="track-stat-icon-wrapper blue-icon">
+                <Clock size={28} />
+              </div>
+              <div className="track-stat-content">
+                <div className="track-stat-number">3+ Years</div>
+                <div className="track-stat-title">E-Commerce Industry Experience</div>
+                <p className="track-stat-desc">Proven execution across dynamic US and EU marketplace algorithmic shifts.</p>
+              </div>
+            </div>
+
+            <div className="track-stat-card highlight-partner-card">
+              <div className="track-stat-icon-wrapper emerald-icon">
+                <Users size={28} />
+              </div>
+              <div className="track-stat-content">
+                <div className="track-stat-number">73+ Partners</div>
+                <div className="track-stat-title">Accounts Managed & Scaled</div>
+                <p className="track-stat-desc">Trusted by account holders across the US and Europe with 100% sovereign ownership.</p>
+              </div>
+            </div>
+
+            <div className="track-stat-card">
+              <div className="track-stat-icon-wrapper amber-icon">
+                <Award size={28} />
+              </div>
+              <div className="track-stat-content">
+                <div className="track-stat-number">99.4%</div>
+                <div className="track-stat-title">Average Store Health Score</div>
+                <p className="track-stat-desc">Dedicated account health monitoring to ensure zero defect rates and longevity.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Month by Month Profit Trajectory Roadmap */}
+          <div className="roadmap-block">
+            <div className="roadmap-headline text-center">
+              <h3>Month-by-Month Expected Profit Trajectory</h3>
+              <p>How your store ramps up safely from initial account warming to mature steady-state passive income.</p>
+            </div>
+
+            <div className="roadmap-cards-grid">
+              {/* Month 1 */}
+              <div className="roadmap-stage-card stage-1">
+                <div className="stage-top-tag">
+                  <span>MONTH 01</span>
+                  <span className="stage-phase-name">Warming & Indexing</span>
+                </div>
+                <div className="stage-profit-box">
+                  <span className="stage-profit-lbl">Expected Net Profit</span>
+                  <div className="stage-profit-amount">€300 – €500</div>
+                  <span className="stage-timeline">Initial Ramp-Up Period</span>
+                </div>
+                <div className="stage-details">
+                  <h5>Safe Testing & Limit Expansion</h5>
+                  <p>
+                    We intentionally warm up the store with low-risk catalog testing to protect your seller standing, generate early positive reviews, and trigger eBay limit increases.
+                  </p>
+                  <ul className="stage-bullets">
+                    <li><CheckCircle2 size={15} /> Safe listing frequency to preserve metrics</li>
+                    <li><CheckCircle2 size={15} /> Initial catalog vetting with fast suppliers</li>
+                    <li><CheckCircle2 size={15} /> Accumulating first 30–60 5-star feedbacks</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Month 2 & 3 */}
+              <div className="roadmap-stage-card stage-2">
+                <div className="stage-top-tag tag-scaling">
+                  <span>MONTH 02 & 03</span>
+                  <span className="stage-phase-name">Scale & Order Velocity</span>
+                </div>
+                <div className="stage-profit-box">
+                  <span className="stage-profit-lbl">Expected Net Profit</span>
+                  <div className="stage-profit-amount text-blue">€1,500 – €2,500</div>
+                  <span className="stage-timeline">Months 2 & 3 Acceleration</span>
+                </div>
+                <div className="stage-details">
+                  <h5>High-Velocity Catalog Scaling</h5>
+                  <p>
+                    With seller feedback established and higher allowances unlocked, we deploy high-velocity listings across multiple categories to rapidly multiply daily sales.
+                  </p>
+                  <ul className="stage-bullets">
+                    <li><CheckCircle2 size={15} /> Aggressive SEO & keyword optimization</li>
+                    <li><CheckCircle2 size={15} /> Multi-category winning product curation</li>
+                    <li><CheckCircle2 size={15} /> Daily automated order fulfillment flows</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Month 3+ Onwards */}
+              <div className="roadmap-stage-card stage-3 stage-featured">
+                <div className="stage-top-tag tag-mature">
+                  <span>MONTH 03 ONWARDS</span>
+                  <span className="stage-phase-name">Steady Passive Income</span>
+                </div>
+                <div className="stage-profit-box">
+                  <span className="stage-profit-lbl">Expected Net Profit</span>
+                  <div className="stage-profit-amount text-emerald">€2,000+ / mo</div>
+                  <span className="stage-timeline">Long-Term Consistent Income</span>
+                </div>
+                <div className="stage-details">
+                  <h5>Mature Ongoing Operation</h5>
+                  <p>
+                    The store transitions into a stabilized, high-velocity asset. Our team manages continuous inventory rotations, customer service, and policy compliance while you receive recurring payouts.
+                  </p>
+                  <ul className="stage-bullets">
+                    <li><CheckCircle2 size={15} /> Stable, recurring €2,000+ monthly profit</li>
+                    <li><CheckCircle2 size={15} /> Hands-off operational labor by our staff</li>
+                    <li><CheckCircle2 size={15} /> Direct bank deposits under your full control</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Transparency / Non-Guarantee Disclaimer Callout */}
+            <div className="realistic-disclaimer-callout">
+              <div className="disclaimer-badge-icon">
+                <AlertCircle size={24} />
+              </div>
+              <div className="disclaimer-copy">
+                <strong>Important Transparency & Reality Note:</strong>
+                <p>
+                  Please note that e-commerce earnings are <em>not legally guaranteed</em>. The profit brackets outlined above reflect typical historical results achieved when an account operates under standard platform conditions, maintains healthy feedback, and avoids external supplier delays. Performance varies based on account vintage, initial selling limits, and seasonal market demand.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: VERIFIED STORE RESULTS & LIVE DASHBOARD PROOF */}
+      <section className="section bg-alt store-proof-section">
+        <div className="container">
+          <div className="section-header text-center">
+            <span className="section-pill">VERIFIED PERFORMANCE PROOF</span>
+            <h2 className="section-title">Real eBay Seller Hub Store Dashboards</h2>
+            <p className="section-subtitle">
+              Inspect authentic sales charts, order counts, and revenue numbers from our active partner stores. Every dashboard features our official Digi Business Solutions watermark and is available for full HD inspection.
+            </p>
+          </div>
+
+          <StoreProofGallery />
+        </div>
+      </section>
+
+      {/* SECTION 5: WHY THIS WORKS (3-COLUMN BENEFIT CARDS) */}
+      <section className="section">
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">A Real Business Partnership Built On Shared Incentives</h2>

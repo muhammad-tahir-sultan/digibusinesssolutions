@@ -1,0 +1,690 @@
+/* Store Proof Gallery Styles */
+.store-proof-gallery-wrapper {
+  margin-top: 2rem;
+}
+
+.store-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.store-proof-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  outline: none;
+}
+
+.store-proof-card:hover,
+.store-proof-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.12);
+  border-color: rgba(2, 132, 199, 0.4);
+}
+
+.store-card-header {
+  padding: 1.25rem 1.25rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.store-card-badge {
+  display: inline-block;
+  background: rgba(2, 132, 199, 0.08);
+  color: #0284C7;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.store-card-title {
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+}
+
+.store-card-category {
+  font-size: 0.82rem;
+  color: #64748B;
+}
+
+.zoom-hint-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #F1F5F9;
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.store-proof-card:hover .zoom-hint-pill {
+  background: #0284C7;
+  color: #ffffff;
+}
+
+/* Store Mockup Wrapper & Hover Overlay */
+.store-mockup-wrapper {
+  position: relative;
+  background: #F8FAFC;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.store-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 31, 58, 0.75);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 5;
+}
+
+.store-proof-card:hover .store-hover-overlay {
+  opacity: 1;
+}
+
+.hover-overlay-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transform: translateY(6px);
+  transition: transform 0.25s ease;
+}
+
+.store-proof-card:hover .hover-overlay-btn {
+  transform: translateY(0);
+}
+
+/* Footer card elements */
+.store-card-footer {
+  padding: 1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.store-card-highlight {
+  font-size: 0.82rem;
+  color: #64748B;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.store-card-split-tag {
+  background: #F0FDF4;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  color: #065F46;
+}
+
+.store-card-split-tag strong {
+  color: #059669;
+  font-weight: 700;
+}
+
+/* ===================================================
+   EBAY DASHBOARD MOCKUP RENDERER
+=================================================== */
+.ebay-dashboard-mockup {
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #111827;
+  padding: 0.85rem;
+  user-select: none;
+}
+
+.hub-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 0.75rem;
+}
+
+.hub-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+}
+
+.hub-ebay-logo {
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: -0.04em;
+}
+
+.hub-title {
+  font-weight: 700;
+  color: #1F2937;
+}
+
+.hub-divider {
+  color: #94A3B8;
+}
+
+.hub-subnav {
+  color: #64748B;
+  font-size: 0.72rem;
+}
+
+.hub-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hub-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #EFF6FF;
+  color: #1D4ED8;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.hub-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #F1F5F9;
+  color: #475569;
+  font-size: 0.68rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* KPI Row */
+.hub-kpi-row {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 0.9fr 1.1fr;
+  gap: 0.5rem;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.hub-kpi-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.hub-kpi-label {
+  font-size: 0.65rem;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 2px;
+}
+
+.hub-kpi-val-group {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.hub-kpi-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.hub-kpi-val.sub {
+  font-size: 0.88rem;
+}
+
+.hub-kpi-val.emerald {
+  color: #059669;
+}
+
+.hub-kpi-growth {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: #059669;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+/* Chart Canvas with Watermarks */
+.hub-chart-container {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 140px;
+}
+
+.hub-svg-chart {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Watermark Overlay */
+.hub-watermark-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transform: rotate(-18deg) scale(1.15);
+  pointer-events: none;
+  opacity: 0.12;
+  user-select: none;
+  z-index: 1;
+}
+
+.watermark-line {
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: #0B1F3A;
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+}
+
+/* Central Watermark Stamp */
+.hub-central-stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+  user-select: none;
+}
+
+.stamp-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 10px;
+  border: 1.5px dashed rgba(11, 31, 58, 0.28);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(1px);
+  color: rgba(11, 31, 58, 0.6);
+  text-align: center;
+}
+
+.stamp-inner span {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.stamp-inner small {
+  font-size: 0.52rem;
+  font-weight: 700;
+  color: #059669;
+  letter-spacing: 0.08em;
+}
+
+/* Bottom status bar */
+.hub-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  font-size: 0.7rem;
+  color: #64748B;
+}
+
+.hub-metric-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hub-metric-note .check-icon {
+  color: #059669;
+}
+
+.hub-feedback-score strong {
+  color: #0F172A;
+}
+
+/* ===================================================
+   MODAL VIEW STYLING (LARGE HD)
+=================================================== */
+.hd-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 31, 58, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hd-modal-content {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 960px;
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  animation: modalZoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalZoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.hd-modal-header {
+  padding: 1.5rem 2rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hd-modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284C7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.hd-modal-title-group h3 {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.hd-modal-title-group p {
+  font-size: 0.9rem;
+  color: #64748B;
+  margin: 0;
+}
+
+.hd-modal-close-btn {
+  background: #F1F5F9;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hd-modal-close-btn:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+  transform: rotate(90deg);
+}
+
+.hd-modal-body {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Modal View of Dashboard Graphic */
+.ebay-dashboard-mockup.is-modal-view {
+  padding: 1.25rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.ebay-dashboard-mockup.is-modal-view .hub-top-bar {
+  padding-bottom: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.ebay-dashboard-mockup.is-modal-view .hub-ebay-logo {
+  font-size: 1.35rem;
+}
+
+.ebay-dashboard-mockup.is-modal-view .hub-title {
+  font-size: 1rem;
+}
+
+.ebay-dashboard-mockup.is-modal-view .hub-kpi-row {
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.ebay-dashboard-mockup.is-modal-view .hub-kpi-label {
+  font-size: 0.75rem;
+}
+
+.ebay-dashboard-mockup.is-modal-view .hub-kpi-val {
+  font-size: 1.45rem;
+}
+
+.ebay-dashboard-mockup.is-modal-view .hub-kpi-val.sub {
+  font-size: 1.3rem;
+}
+
+.ebay-dashboard-mockup.is-modal-view .hub-chart-container {
+  height: 260px;
+}
+
+.ebay-dashboard-mockup.is-modal-view .watermark-line {
+  font-size: 1.4rem;
+}
+
+.ebay-dashboard-mockup.is-modal-view .stamp-inner {
+  padding: 8px 18px;
+}
+
+.ebay-dashboard-mockup.is-modal-view .stamp-inner span {
+  font-size: 1rem;
+}
+
+.ebay-dashboard-mockup.is-modal-view .stamp-inner small {
+  font-size: 0.72rem;
+}
+
+/* Modal Stats Panel below chart */
+.hd-modal-stats-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background: #F8FAFC;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.hd-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hd-stat-label {
+  font-size: 0.75rem;
+  color: #64748B;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hd-stat-value {
+  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+}
+
+.hd-stat-sub {
+  font-size: 0.75rem;
+  color: #94A3B8;
+}
+
+.hd-stat-value.text-emerald {
+  color: #059669;
+}
+
+.hd-stat-value.text-blue {
+  color: #0284C7;
+}
+
+/* Modal Footer Nav */
+.hd-modal-footer {
+  padding: 1rem 2rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hd-modal-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hd-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hd-nav-btn:hover {
+  background: #E2E8F0;
+  border-color: #94A3B8;
+}
+
+.hd-counter {
+  font-size: 0.85rem;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.hd-watermark-notice {
+  font-size: 0.75rem;
+  color: #94A3B8;
+  font-style: italic;
+}
+
+/* Responsive queries */
+@media (max-width: 1024px) {
+  .store-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .store-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hd-modal-stats-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-chart-container {
+    height: 180px;
+  }
+
+  .hd-modal-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hd-modal-header {
+    padding: 1.25rem 1.25rem 0.75rem;
+  }
+  .hd-modal-body {
+    padding: 1rem 1.25rem;
+  }
+  .hd-modal-stats-panel {
+    grid-template-columns: 1fr;
+  }
+  .ebay-dashboard-mockup {
+    padding: 0.5rem;
+  }
+  .hub-kpi-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}

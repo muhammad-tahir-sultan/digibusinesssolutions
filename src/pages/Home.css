@@ -261,6 +261,329 @@
   color: #94A3B8;
 }
 
+/* Section Pill Badge */
+.section-pill {
+  display: inline-block;
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284C7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  border: 1px solid rgba(2, 132, 199, 0.2);
+}
+
+/* ===================================================
+   TRACK RECORD & PROFIT TRAJECTORY SECTION
+=================================================== */
+.track-record-section {
+  background-color: #ffffff;
+}
+
+.track-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.track-stat-card {
+  background: #F8FAFC;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.track-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(11, 31, 58, 0.07);
+}
+
+.track-stat-card.highlight-partner-card {
+  background: linear-gradient(135deg, #0B1F3A 0%, #173259 100%);
+  color: #ffffff;
+  border-color: rgba(29, 78, 216, 0.4);
+  box-shadow: 0 10px 25px rgba(11, 31, 58, 0.15);
+}
+
+.track-stat-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.track-stat-icon-wrapper.blue-icon {
+  background: rgba(2, 132, 199, 0.12);
+  color: #0284C7;
+}
+
+.track-stat-icon-wrapper.emerald-icon {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34D399;
+}
+
+.track-stat-icon-wrapper.amber-icon {
+  background: rgba(245, 158, 11, 0.12);
+  color: #D97706;
+}
+
+.track-stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-stat-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.highlight-partner-card .track-stat-number {
+  color: #ffffff;
+}
+
+.track-stat-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.highlight-partner-card .track-stat-title {
+  color: #E2E8F0;
+}
+
+.track-stat-desc {
+  font-size: 0.8rem;
+  color: #64748B;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.highlight-partner-card .track-stat-desc {
+  color: #94A3B8;
+}
+
+/* Roadmap Month-by-Month Block */
+.roadmap-block {
+  background: #F8FAFC;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.03);
+}
+
+.roadmap-headline {
+  margin-bottom: 2rem;
+}
+
+.roadmap-headline h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.35rem;
+}
+
+.roadmap-headline p {
+  font-size: 0.95rem;
+  color: #64748B;
+}
+
+.roadmap-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.roadmap-stage-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.roadmap-stage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(11, 31, 58, 0.08);
+}
+
+.roadmap-stage-card.stage-featured {
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.1);
+}
+
+.stage-top-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #64748B;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--color-border);
+  margin-bottom: 1rem;
+}
+
+.stage-phase-name {
+  background: #F1F5F9;
+  color: #475569;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.stage-top-tag.tag-scaling .stage-phase-name {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284C7;
+}
+
+.stage-top-tag.tag-mature .stage-phase-name {
+  background: rgba(16, 185, 129, 0.15);
+  color: #059669;
+}
+
+.stage-profit-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.stage-profit-lbl {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #64748B;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.stage-profit-amount {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.stage-profit-amount.text-blue {
+  color: #0284C7;
+}
+
+.stage-profit-amount.text-emerald {
+  color: #059669;
+}
+
+.stage-timeline {
+  display: block;
+  font-size: 0.72rem;
+  color: #94A3B8;
+}
+
+.stage-details h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stage-details p {
+  font-size: 0.84rem;
+  color: #64748B;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.stage-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.stage-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.stage-bullets li svg {
+  color: #059669;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Realistic Transparency Disclaimer Callout */
+.realistic-disclaimer-callout {
+  background: #FFFBEB;
+  border: 1px solid #FCD34D;
+  border-radius: 12px;
+  padding: 1.15rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.disclaimer-badge-icon {
+  color: #D97706;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.disclaimer-copy strong {
+  display: block;
+  font-size: 0.85rem;
+  color: #92400E;
+  margin-bottom: 0.25rem;
+}
+
+.disclaimer-copy p {
+  font-size: 0.8rem;
+  color: #B45309;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.disclaimer-copy em {
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: underline;
+}
+
+/* Store Proof Section Container */
+.store-proof-section {
+  position: relative;
+}
+
 /* Benefit Cards */
 .section-header {
   max-width: 720px;
@@ -788,4 +1111,45 @@
     justify-content: center;
     border-radius: 8px;
   }
+
+  /* Responsive Track Record & Roadmap */
+  .track-stats-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .roadmap-block {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+
+  .roadmap-headline h3 {
+    font-size: 1.25rem;
+  }
+
+  .roadmap-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .stage-profit-amount {
+    font-size: 1.35rem;
+  }
+
+  .realistic-disclaimer-callout {
+    flex-direction: column;
+    padding: 1.1rem;
+    gap: 0.75rem;
+  }
 }
+
+@media (max-width: 992px) and (min-width: 641px) {
+  .track-stats-row {
+    grid-template-columns: 1fr;
+  }
+  .roadmap-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
