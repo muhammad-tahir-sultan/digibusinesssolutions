@@ -164,6 +164,9 @@
   color: #111827;
   padding: 0.85rem;
   user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .hub-top-bar {
@@ -173,6 +176,10 @@
   padding-bottom: 0.6rem;
   border-bottom: 1px solid #E2E8F0;
   margin-bottom: 0.75rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hub-brand {
@@ -180,32 +187,46 @@
   align-items: center;
   gap: 6px;
   font-size: 0.78rem;
+  min-width: 0;
+  flex-shrink: 0;
 }
 
 .hub-ebay-logo {
   font-weight: 900;
   font-size: 1rem;
   letter-spacing: -0.04em;
+  flex-shrink: 0;
 }
 
 .hub-title {
   font-weight: 700;
   color: #1F2937;
+  white-space: nowrap;
 }
 
 .hub-divider {
   color: #94A3B8;
+  display: inline;
 }
 
 .hub-subnav {
   color: #64748B;
   font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+/* Hide secondary subnav on cards to keep the header clean and avoid overflow */
+.ebay-dashboard-mockup:not(.is-modal-view) .hub-divider,
+.ebay-dashboard-mockup:not(.is-modal-view) .hub-subnav {
+  display: none;
 }
 
 .hub-badges {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .hub-status-badge {
@@ -218,6 +239,8 @@
   font-weight: 600;
   padding: 2px 6px;
   border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .hub-date-badge {
@@ -229,23 +252,29 @@
   font-size: 0.68rem;
   padding: 2px 6px;
   border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* KPI Row */
 .hub-kpi-row {
   display: grid;
-  grid-template-columns: 1.4fr 0.9fr 0.9fr 1.1fr;
+  grid-template-columns: 1.3fr 0.9fr 0.9fr 1.1fr;
   gap: 0.5rem;
   background: #F8FAFC;
   border: 1px solid #E2E8F0;
   border-radius: 8px;
   padding: 0.6rem 0.75rem;
   margin-bottom: 0.75rem;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .hub-kpi-cell {
   display: flex;
   flex-direction: column;
+  min-width: 0; /* Critical: prevents grid tracks from exceeding card container */
+  overflow: hidden;
 }
 
 .hub-kpi-label {
@@ -254,6 +283,9 @@
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hub-kpi-val-group {
@@ -261,12 +293,15 @@
   align-items: baseline;
   gap: 4px;
   flex-wrap: wrap;
+  min-width: 0;
 }
 
 .hub-kpi-val {
   font-size: 0.95rem;
   font-weight: 700;
   color: #0F172A;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 
 .hub-kpi-val.sub {
@@ -284,6 +319,7 @@
   color: #059669;
   font-size: 0.68rem;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 /* Chart Canvas with Watermarks */
@@ -370,16 +406,25 @@
   padding-top: 0.5rem;
   font-size: 0.7rem;
   color: #64748B;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hub-metric-note {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  white-space: nowrap;
 }
 
 .hub-metric-note .check-icon {
   color: #059669;
+}
+
+.hub-feedback-score {
+  white-space: nowrap;
 }
 
 .hub-feedback-score strong {
@@ -642,21 +687,43 @@
 @media (max-width: 1024px) {
   .store-cards-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .hub-kpi-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem 0.75rem;
   }
 }
 
 @media (max-width: 768px) {
   .store-cards-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .hd-modal-backdrop {
+    padding: 1rem;
   }
 
   .hd-modal-stats-panel {
     grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 0.85rem;
   }
 
   .ebay-dashboard-mockup.is-modal-view .hub-kpi-row {
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-val {
+    font-size: 1.2rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-val.sub {
+    font-size: 1.1rem;
   }
 
   .ebay-dashboard-mockup.is-modal-view .hub-chart-container {
@@ -665,26 +732,297 @@
 
   .hd-modal-footer {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
+    gap: 0.75rem;
+  }
+
+  .hd-modal-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Hide subnav on mobile so eBay logo and badges fit with zero overflow */
+  .hub-divider,
+  .hub-subnav {
+    display: none !important;
+  }
+
+  .hub-top-bar {
+    gap: 0.35rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .hub-status-badge,
+  .hub-date-badge {
+    font-size: 0.65rem;
+    padding: 2px 5px;
+  }
+
+  /* Modal Mobile Sizing */
+  .hd-modal-backdrop {
+    padding: 0.5rem;
+  }
+
+  .hd-modal-content {
+    border-radius: 14px;
+    max-height: 94vh;
+  }
+
+  .hd-modal-header {
+    padding: 1rem 1rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .hd-modal-title-group h3 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+
+  .hd-modal-title-group p {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .hd-modal-badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    margin-bottom: 0.35rem;
+  }
+
+  .hd-modal-close-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hd-modal-body {
+    padding: 0.75rem;
+    gap: 0.85rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view {
+    padding: 0.65rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-top-bar {
+    padding-bottom: 0.45rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-ebay-logo {
+    font-size: 1.15rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-title {
+    font-size: 0.92rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-label {
+    font-size: 0.65rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-val {
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-val.sub {
+    font-size: 0.95rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-chart-container {
+    height: 150px;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .watermark-line {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .stamp-inner {
+    padding: 4px 10px;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .stamp-inner span {
+    font-size: 0.72rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .stamp-inner small {
+    font-size: 0.55rem;
+  }
+
+  .hd-modal-stats-panel {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.75rem;
+    gap: 0.6rem;
+  }
+
+  .hd-stat-label {
+    font-size: 0.65rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .hd-stat-value {
+    font-size: 1.05rem;
+  }
+
+  .hd-stat-sub {
+    font-size: 0.68rem;
+  }
+
+  .hd-modal-footer {
+    padding: 0.75rem 1rem 1rem;
+    gap: 0.6rem;
+  }
+
+  .hd-nav-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 6px 10px;
+    font-size: 0.78rem;
+  }
+
+  .hd-counter {
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  .hd-watermark-notice {
+    font-size: 0.68rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hd-modal-header {
-    padding: 1.25rem 1.25rem 0.75rem;
+  /* Store Card in Grid */
+  .store-card-header {
+    padding: 0.9rem 0.9rem 0.5rem;
+    gap: 0.4rem;
   }
+
+  .store-card-title {
+    font-size: 0.98rem;
+  }
+
+  .store-card-category {
+    font-size: 0.78rem;
+  }
+
+  .zoom-hint-pill {
+    padding: 3px 7px;
+    font-size: 0.68rem;
+  }
+
+  .ebay-dashboard-mockup {
+    padding: 0.65rem 0.5rem;
+  }
+
+  .hub-kpi-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem 0.55rem;
+    padding: 0.5rem;
+  }
+
+  .hub-kpi-val {
+    font-size: 0.88rem;
+  }
+
+  .hub-kpi-val.sub {
+    font-size: 0.82rem;
+  }
+
+  .hub-kpi-label {
+    font-size: 0.6rem;
+  }
+
+  .hub-kpi-growth {
+    font-size: 0.62rem;
+  }
+
+  .hub-chart-container {
+    height: 125px;
+  }
+
+  .hub-bottom-bar {
+    font-size: 0.64rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .store-card-footer {
+    padding: 0.85rem 0.9rem 1rem;
+    gap: 0.55rem;
+  }
+
+  .store-card-highlight {
+    font-size: 0.78rem;
+  }
+
+  .store-card-split-tag {
+    font-size: 0.74rem;
+    padding: 5px 8px;
+  }
+
+  /* Modal Details */
+  .hd-modal-backdrop {
+    padding: 0.35rem;
+  }
+
   .hd-modal-body {
-    padding: 1rem 1.25rem;
+    padding: 0.5rem;
+    gap: 0.65rem;
   }
+
+  .ebay-dashboard-mockup.is-modal-view {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem;
+    padding: 0.45rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-val {
+    font-size: 0.95rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-val.sub {
+    font-size: 0.88rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-chart-container {
+    height: 135px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hub-kpi-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .ebay-dashboard-mockup.is-modal-view .hub-kpi-row {
+    grid-template-columns: 1fr;
+  }
+
   .hd-modal-stats-panel {
     grid-template-columns: 1fr;
   }
-  .ebay-dashboard-mockup {
-    padding: 0.5rem;
-  }
-  .hub-kpi-row {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+
+  .hub-badges {
+    width: 100%;
+    justify-content: flex-start;
   }
 }
