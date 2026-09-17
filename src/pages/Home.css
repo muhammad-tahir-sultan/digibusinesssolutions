@@ -1176,3 +1176,28 @@
   }
 }
 
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    line-height: 1.25;
+  }
+
+  .roadmap-headline h3 {
+    font-size: 1.15rem;
+  }
+
+  .track-stat-number {
+    font-size: 1.55rem;
+  }
+
+  .stage-profit-amount {
+    font-size: 1.25rem;
+  }
+}
+
+
