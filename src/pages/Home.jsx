@@ -178,7 +178,7 @@ const Home = () => {
                 <Award size={28} />
               </div>
               <div className="track-stat-content">
-                <div className="track-stat-number">99.4%</div>
+                <div className="track-stat-number">97.4%</div>
                 <div className="track-stat-title">Average Store Health Score</div>
                 <p className="track-stat-desc">Dedicated account health monitoring to ensure zero defect rates and longevity.</p>
               </div>
@@ -480,8 +480,13 @@ const Home = () => {
 
           <div className="faq-teaser-list">
             <div className="faq-teaser-item">
-              <h4>Do I need any previous eBay or e-commerce experience?</h4>
-              <p>No. Our operational team handles all product research, listing creation, customer inquiries, and fulfillment. You only need to be the verified account owner.</p>
+              <h4>What is the minimum working capital needed for the first month?</h4>
+              <p>While there are zero setup or monthly management fees, you will need approximately €400 – €600 in working capital to fulfill incoming customer orders with suppliers until eBay deposits the customer payments into your bank account.</p>
+            </div>
+
+            <div className="faq-teaser-item">
+              <h4>When do I receive my first payout, and how do ongoing payouts work?</h4>
+              <p>Per eBay policy, your first payout is received within 15–20 days for identity verification on a new or warming account. After this initial milestone, payout funds for each subsequent order are released within 7 days of verified customer delivery.</p>
             </div>
 
             <div className="faq-teaser-item">

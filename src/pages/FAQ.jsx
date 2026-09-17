@@ -33,6 +33,14 @@ const FAQ = () => {
       a: "No. Our specialized operational team handles all research, listings, catalog management, customer care, and order fulfillment. You simply need to be the verified account owner in good standing."
     },
     {
+      q: "What is the minimum investment required for the first month to start?",
+      a: "While there are zero upfront management or setup fees, you will need approximately €400 – €600 in working capital for the first month. This money remains 100% yours and is used strictly to place and fulfill incoming customer orders with verified suppliers until eBay clears and deposits the customer payments into your bank account."
+    },
+    {
+      q: "When do I receive my first payout, and how do ongoing payouts work?",
+      a: "According to eBay's official policy, your first payout is received within 15–20 days as eBay performs standard security and identity verification on a new or warming seller account. After this initial verification period is complete, funds for subsequent orders are released directly into your linked bank account within 7 days of verified customer delivery."
+    },
+    {
       q: "Who legally owns the eBay seller account?",
       a: "You do, always. We operate the store on your behalf as authorized team members, but the account registration, credentials, and funds it generates legally belong to you."
     },

@@ -963,6 +963,29 @@
     margin-bottom: 0.75rem;
   }
 
+  /* Scale section headings on mobile to match hero size */
+  .section-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+    line-height: 1.25;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+  }
+
+  .section-subtitle {
+    font-size: 0.885rem;
+    line-height: 1.5;
+  }
+
+  .section-pill {
+    font-size: 0.68rem;
+    padding: 3px 10px;
+    margin-bottom: 0.5rem;
+  }
+
   .hero-desktop-br {
     display: none;
   }
