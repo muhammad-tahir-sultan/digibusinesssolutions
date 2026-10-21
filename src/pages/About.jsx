@@ -13,6 +13,7 @@ import {
   Users
 } from 'lucide-react';
 import Button from '../components/Button';
+import { LinkedinIcon } from '../components/Icons';
 import './About.css';
 
 const About = () => {
@@ -123,10 +124,22 @@ const About = () => {
               <div className="leadership-info">
                 <div className="leadership-header">
                   <div className="leadership-name-row">
-                    <h3>Muhammad Tahir</h3>
-                    <span className="verified-tag">
-                      <CheckCircle2 size={13} /> Verified
-                    </span>
+                    <div className="leadership-name-group">
+                      <h3>Muhammad Tahir</h3>
+                      <span className="verified-tag">
+                        <CheckCircle2 size={13} /> Verified
+                      </span>
+                    </div>
+                    <a
+                      href="https://www.linkedin.com/in/muhammadtahirsultan"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="leadership-linkedin-btn"
+                      title="Connect with Muhammad Tahir on LinkedIn"
+                    >
+                      <LinkedinIcon size={14} />
+                      <span>LinkedIn Profile</span>
+                    </a>
                   </div>
                   <div className="leadership-role">Founder & Operations Lead</div>
                 </div>

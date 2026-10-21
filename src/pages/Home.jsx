@@ -61,30 +61,13 @@ const Home = () => {
           </div>
 
           <div className="hero-visual">
-            <div className="founder-hero-card">
-              <div className="founder-img-wrapper">
+            <div className="partner-hero-card">
+              <div className="partner-img-wrapper">
                 <img 
-                  src="/Founder_Photo_Navy_Theme.png" 
-                  alt="Muhammad Tahir - Founder of Digi Business Solutions" 
-                  className="founder-hero-img"
+                  src="/Usama_Hanan_Business_Partner.png" 
+                  alt="Digi Business Solutions Operations" 
+                  className="partner-hero-img"
                 />
-                <div className="founder-trust-pill">
-                  <Shield size={16} className="pill-shield" />
-                  <span>Founder-Led Operations</span>
-                </div>
-              </div>
-
-              <div className="founder-card-footer">
-                <div className="founder-top-row">
-                  <div className="founder-identity">
-                    <strong className="founder-name">Muhammad Tahir</strong>
-                    <span className="founder-verified-badge">✓ Verified</span>
-                  </div>
-                  <div className="founder-split-tag">
-                    <span>60/40 Split</span>
-                  </div>
-                </div>
-                <span className="founder-title">Founder, Digi Business Solutions</span>
               </div>
             </div>
           </div>
@@ -143,7 +126,7 @@ const Home = () => {
         <div className="container">
           <div className="section-header text-center">
             <span className="section-pill">OUR JOURNEY & EXPERTISE</span>
-            <h2 className="section-title">3+ Years of Experience Across 73+ Partner Stores</h2>
+            <h2 className="section-title">3+ Years of Experience Across 30+ Partner Stores</h2>
             <p className="section-subtitle">
               We operate on real e-commerce mechanics, not empty promises. Here is what we've built and the realistic profit trajectory you can expect.
             </p>
@@ -167,7 +150,7 @@ const Home = () => {
                 <Users size={28} />
               </div>
               <div className="track-stat-content">
-                <div className="track-stat-number">73+ Partners</div>
+                <div className="track-stat-number">30+ Partners</div>
                 <div className="track-stat-title">Accounts Managed & Scaled</div>
                 <p className="track-stat-desc">Trusted by account holders across the US and Europe with 100% sovereign ownership.</p>
               </div>

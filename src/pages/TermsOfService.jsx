@@ -67,6 +67,7 @@ const TermsOfService = () => {
             </p>
             <p className="legal-contact-box">
               <strong>Digi Business Solutions</strong><br />
+              Address: Zakaria Town Street 23D, Multan, Pakistan<br />
               Email: <a href="mailto:founder.digibusinesssolutions@gmail.com">founder.digibusinesssolutions@gmail.com</a><br />
               WhatsApp: <a href="https://wa.me/923266640988" target="_blank" rel="noopener noreferrer">+92 326 6640988</a>
             </p>

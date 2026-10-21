@@ -137,12 +137,41 @@
   color: #34D399;
 }
 
+.contact-link.address-link {
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.contact-link.address-link .contact-icon {
+  margin-top: 2px;
+}
+
+.contact-link.address-link:hover {
+  color: #38BDF8;
+}
+
 .contact-icon {
   flex-shrink: 0;
 }
 
 .text-green {
   color: #25D366;
+}
+
+.text-blue {
+  color: #38BDF8;
+}
+
+.text-linkedin {
+  color: #0A66C2;
+}
+
+.contact-link.linkedin-link:hover {
+  color: #38BDF8;
+}
+
+.address-text {
+  line-height: 1.4;
 }
 
 .email-text {
