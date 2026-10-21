@@ -24,3 +24,6 @@ dist-ssr
 config.bat
 
 /node_modules
+
+# Brand & Social Media Graphics Suite (Generated Assets)
+/brand-assets
