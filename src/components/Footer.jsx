@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Store, TrendingUp, ShieldCheck, Mail, Phone, MessageCircle } from 'lucide-react';
+import { Store, TrendingUp, ShieldCheck, Mail, Phone, MessageCircle, MapPin } from 'lucide-react';
+import { LinkedinIcon } from './Icons';
 import './Footer.css';
 
 const Footer = () => {
@@ -58,6 +59,18 @@ const Footer = () => {
             <ul className="footer-contact-list">
               <li>
                 <a
+                  href="https://maps.google.com/?q=Zakaria+Town+Street+23D,+Multan,+Pakistan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-link address-link"
+                  title="View on Google Maps"
+                >
+                  <MapPin size={18} className="contact-icon text-blue" />
+                  <span className="address-text">Zakaria Town Street 23D, Multan, Pakistan</span>
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://wa.me/923266640988?text=Hello%20Digi%20Business%20Solutions,%20I%20would%20like%20to%20apply%20for%20the%20eBay%20partnership."
                   target="_blank"
                   rel="noopener noreferrer"
@@ -71,6 +84,18 @@ const Footer = () => {
                 <a href="mailto:founder.digibusinesssolutions@gmail.com" className="contact-link">
                   <Mail size={18} className="contact-icon" />
                   <span className="email-text">founder.digibusinesssolutions@gmail.com</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/muhammadtahirsultan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-link linkedin-link"
+                  title="Connect with Muhammad Tahir on LinkedIn"
+                >
+                  <LinkedinIcon size={18} className="contact-icon text-linkedin" />
+                  <span>Muhammad Tahir (Founder)</span>
                 </a>
               </li>
             </ul>

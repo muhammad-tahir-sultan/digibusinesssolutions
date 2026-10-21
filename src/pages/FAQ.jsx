@@ -6,6 +6,7 @@ import {
   Send, 
   MessageCircle, 
   Mail, 
+  MapPin,
   ShieldCheck, 
   CheckCircle2, 
   Clock 
@@ -307,6 +308,35 @@ I would like to discuss becoming a partner.`;
                 <h4>Official Email Inquiry</h4>
                 <a href="mailto:founder.digibusinesssolutions@gmail.com" className="sidebar-email">founder.digibusinesssolutions@gmail.com</a>
                 <span className="sidebar-sub">For formal documentation or general business queries.</span>
+              </div>
+
+              <div className="sidebar-card office-card">
+                <div className="sidebar-icon-wrap location-wrap">
+                  <MapPin size={24} />
+                </div>
+                <h4>Main Office Address</h4>
+                <a 
+                  href="https://maps.google.com/?q=Digi+Business+Solutions+Multan" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="sidebar-address-link"
+                  title="Open Digi Business Solutions on Google Maps"
+                >
+                  Zakaria Town Street 23D, Multan, Pakistan
+                </a>
+                <span className="sidebar-sub">Operational & Business Management Office</span>
+                <div className="sidebar-map-embed">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3449.101872118373!2d71.50682979999999!3d30.1770838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b37618b0edf6f%3A0x34012a11e88be08b!2sDigi%20Business%20Solutions%20Multan!5e0!3m2!1sen!2s!4v1792611127458!5m2!1sen!2s" 
+                    width="100%" 
+                    height="200" 
+                    style={{ border: 0 }} 
+                    allowFullScreen="" 
+                    loading="lazy" 
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    title="Digi Business Solutions Multan Google Map"
+                  ></iframe>
+                </div>
               </div>
 
               <div className="sidebar-card trust-sidebar-card">
