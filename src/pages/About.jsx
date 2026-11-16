@@ -9,8 +9,7 @@ import {
   Headphones, 
   CheckCircle2, 
   TrendingUp,
-  MessageCircle,
-  Users
+  MessageCircle
 } from 'lucide-react';
 import Button from '../components/Button';
 import { LinkedinIcon } from '../components/Icons';
@@ -51,29 +50,12 @@ const About = () => {
             </div>
 
             <div className="story-callout-box">
-              <div className="story-leadership-duo">
-                <div className="story-duo-item">
-                  <img 
-                    src="/Founder_Photo_Navy_Theme.png" 
-                    alt="Muhammad Tahir - Founder & Operations Lead" 
-                    className="story-duo-img"
-                  />
-                  <div className="story-duo-caption">
-                    <strong>Muhammad Tahir</strong>
-                    <span>Founder</span>
-                  </div>
-                </div>
-                <div className="story-duo-item">
-                  <img 
-                    src="/Usama_Hanan_Business_Partner.png" 
-                    alt="Usama Hanan - Business Partner" 
-                    className="story-duo-img"
-                  />
-                  <div className="story-duo-caption">
-                    <strong>Usama Hanan</strong>
-                    <span>Business Partner</span>
-                  </div>
-                </div>
+              <div className="story-founder-image-box">
+                <img 
+                  src="/Founder_Photo_Navy_Theme.png" 
+                  alt="Muhammad Tahir - Founder of Digi Business Solutions" 
+                  className="story-founder-img"
+                />
               </div>
               <div className="callout-inner">
                 <div className="callout-stat-group">
@@ -101,13 +83,13 @@ const About = () => {
         <div className="container">
           <div className="section-header text-center">
             <span className="story-pill">CORE LEADERSHIP</span>
-            <h2 className="section-title">Meet Our Executive Team</h2>
+            <h2 className="section-title">Meet Our Founder & Operations Lead</h2>
             <p className="section-subtitle">
-              Experienced e-commerce leaders managing daily store operations, client relations, and strategic growth.
+              Experienced e-commerce leadership managing daily store operations, client relations, and strategic growth.
             </p>
           </div>
 
-          <div className="leadership-grid">
+          <div className="leadership-grid leadership-grid-single">
             {/* Muhammad Tahir */}
             <div className="leadership-card">
               <div className="leadership-img-wrapper">
@@ -150,40 +132,6 @@ const About = () => {
                   <span className="leadership-tag">Operations Management</span>
                   <span className="leadership-tag">Account Health & Risk</span>
                   <span className="leadership-tag">Catalog Optimization</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Usama Hanan */}
-            <div className="leadership-card">
-              <div className="leadership-img-wrapper">
-                <img 
-                  src="/Usama_Hanan_Business_Partner.png" 
-                  alt="Usama Hanan - Business Partner" 
-                  className="leadership-img"
-                />
-                <div className="leadership-badge">
-                  <Handshake size={14} />
-                  <span>Business Partner</span>
-                </div>
-              </div>
-              <div className="leadership-info">
-                <div className="leadership-header">
-                  <div className="leadership-name-row">
-                    <h3>Usama Hanan</h3>
-                    <span className="verified-tag">
-                      <CheckCircle2 size={13} /> Verified
-                    </span>
-                  </div>
-                  <div className="leadership-role">Business Partner</div>
-                </div>
-                <p className="leadership-bio">
-                  Oversees strategic client partnerships, business scaling, partner relations, and commercial development to accelerate shared revenue opportunities.
-                </p>
-                <div className="leadership-tags">
-                  <span className="leadership-tag">Business Partnerships</span>
-                  <span className="leadership-tag">Strategic Scaling</span>
-                  <span className="leadership-tag">Client Relations</span>
                 </div>
               </div>
             </div>
