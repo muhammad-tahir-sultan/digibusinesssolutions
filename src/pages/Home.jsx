@@ -61,30 +61,13 @@ const Home = () => {
           </div>
 
           <div className="hero-visual">
-            <div className="founder-hero-card">
-              <div className="founder-img-wrapper">
+            <div className="partner-hero-card">
+              <div className="partner-img-wrapper">
                 <img 
-                  src="/Founder_Photo_Navy_Theme.png" 
-                  alt="Muhammad Tahir - Founder of Digi Business Solutions" 
-                  className="founder-hero-img"
+                  src="/Usama_Hanan_Business_Partner.png" 
+                  alt="Digi Business Solutions Operations" 
+                  className="partner-hero-img"
                 />
-                <div className="founder-trust-pill">
-                  <Shield size={16} className="pill-shield" />
-                  <span>Founder-Led Operations</span>
-                </div>
-              </div>
-
-              <div className="founder-card-footer">
-                <div className="founder-top-row">
-                  <div className="founder-identity">
-                    <strong className="founder-name">Muhammad Tahir</strong>
-                    <span className="founder-verified-badge">✓ Verified</span>
-                  </div>
-                  <div className="founder-split-tag">
-                    <span>60/40 Split</span>
-                  </div>
-                </div>
-                <span className="founder-title">Founder, Digi Business Solutions</span>
               </div>
             </div>
           </div>
